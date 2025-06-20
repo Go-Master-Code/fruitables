@@ -34,7 +34,7 @@ func main() {
 	fileServer := http.FileServer(http.Dir("assets")) //load directory
 	mux.Handle("/static/", http.StripPrefix("/static", fileServer))
 
-	//buat log untuk tahu server sudah berjalan di port 3000
+	//buat log untuk tahu server sudah berjalan di port 8080
 	log.Println("Server running on port 8080")
 
 	//menjalankan server
