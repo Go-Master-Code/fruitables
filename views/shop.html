@@ -181,7 +181,7 @@
                 text: message,
                 confirmButtonText: 'OK'
                 });
-                alert("Handler shop eksekusi");
+                //alert("Handler shop eksekusi");
                 fetch("http://localhost:8080/shop")
                 .then(data => {
                     document.getElementById("numberOfItem").textContent = '{{.JumlahItem}}';
