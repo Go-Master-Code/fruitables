@@ -1,0 +1,91 @@
+{{template "layout" .}}
+{{define "main"}}
+
+    <form id="myForm" action="/update_user" method="post">
+        <!-- Single Page Header start -->
+        <div class="container-fluid page-header py-5">
+            <h1 class="text-center text-white display-6">User</h1>
+            <ol class="breadcrumb justify-content-center mb-0">
+                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                <li class="breadcrumb-item active text-white">User</li>
+            </ol>
+        </div>
+        <!-- Single Page Header End -->
+        
+        <!-- Checkout Page Start -->
+        {{range .User}}    
+        
+        <div class="container-fluid py-5">
+            <div class="container py-5">
+                <h1 class="mb-4">User details</h1>
+                <div class="row g-5">
+                    <div class="col-md-12 col-lg-6 col-xl-12">
+                        <div class="row">
+                            <div class="col-md-12 col-lg-3">
+                                <div class="form-item w-100">
+                                    <label class="form-label my-3">Username<sup>*</sup></label>
+                                    <input type="text" class="form-control" readonly value="{{.ID}}">
+                                </div>
+                            </div>
+                            <div class="col-md-12 col-lg-3">
+                                <div class="form-item w-100">
+                                    <label class="form-label my-3">Email Address<sup>*</sup></label>
+                                    <input type="email" id="e" name="e" class="form-control" value="{{.Email}}">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 col-lg-3">
+                                <div class="form-item w-100">
+                                    <label class="form-label my-3">First Name<sup>*</sup></label>
+                                    <input type="text" id="firstName" name="firstName" class="form-control" value="{{.FirstName}}">
+                                </div>
+                            </div>
+                            <div class="col-md-12 col-lg-3">
+                                <div class="form-item w-100">
+                                    <label class="form-label my-3">Last Name<sup>*</sup></label>
+                                    <input type="text" id="lastName" name="lastName" class="form-control" value="{{.LastName}}">
+                                </div>
+                            </div>
+                            <div class="col-md-12 col-lg-3">
+                                <div class="form-item w-100">
+                                    <label class="form-label my-3">Mobile<sup>*</sup></label>
+                                    <input type="text" id="telepon" name="telepon" class="form-control" value="{{.Telepon}}">
+                                </div>
+                            </div>
+                            <div class="col-md-12 col-lg-3">
+                                <div class="form-item w-100">
+                                    <label class="form-label my-3">Postcode/Zip<sup>*</sup></label>
+                                    <input type="text" id="kodePos" name="kodePos" class="form-control" value="{{.KodePos}}">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 col-lg-6">
+                                <label class="form-label my-3">Address <sup>*</sup></label>
+                                <input type="text" id="alamat" name="alamat" class="form-control" value="{{.Alamat}}">
+                            </div>
+                            <div class="col-md-12 col-lg-3">
+                                <div class="form-item w-100">
+                                    <label class="form-label my-3">Country<sup>*</sup></label>
+                                    <input type="text" id="negara" name="negara" class="form-control" value="{{.Negara}}">
+                                </div>
+                            </div>
+                            <div class="col-md-12 col-lg-3">
+                                <div class="form-item w-100">
+                                    <label class="form-label my-3">Town/City<sup>*</sup></label>
+                                    <input type="text" id="kota" name="kota" class="form-control" value="{{.Kota}}">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row g-4 text-center align-items-center justify-content-center pt-4">
+                            <button type="submit" class="btn border-secondary py-3 px-4 text-uppercase w-100 text-primary">Update Data</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {{end}}
+        <!-- Checkout Page End -->
+     </form>
+{{end}}
