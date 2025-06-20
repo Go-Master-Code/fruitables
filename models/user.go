@@ -1,8 +1,9 @@
 package models
 
 import (
-	"ecommerce/bcrypt"
 	"log"
+
+	"github.com/Go-Master-Code/fruitables/bcrypt"
 
 	"gorm.io/gorm"
 )

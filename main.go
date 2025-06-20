@@ -1,10 +1,11 @@
 package main
 
 import (
-	"ecommerce/handler"
-	"ecommerce/middleware"
 	"log"
 	"net/http"
+
+	"github.com/Go-Master-Code/fruitables/handler"
+	"github.com/Go-Master-Code/fruitables/middleware"
 )
 
 func main() {

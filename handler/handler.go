@@ -1,9 +1,6 @@
 package handler
 
 import (
-	"ecommerce/bcrypt"
-	"ecommerce/config"
-	"ecommerce/models"
 	"encoding/json"
 	"fmt"
 	"log"
@@ -13,6 +10,10 @@ import (
 	"strconv"
 	"text/template"
 	"time"
+
+	"github.com/Go-Master-Code/fruitables/bcrypt"
+	"github.com/Go-Master-Code/fruitables/config"
+	"github.com/Go-Master-Code/fruitables/models"
 
 	"github.com/gorilla/sessions"
 )
